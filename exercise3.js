@@ -29,7 +29,8 @@ class Manager extends Employee {
     this.#department = department
   }
   introduce(){
-    return `${super.introduce()} in the ${this.#department} department`
+    const parentVal = super.introduce()
+    return `${parentVal} in the ${this.#department} department`
   }
   
 }
