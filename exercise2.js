@@ -14,6 +14,7 @@ class Animal {
   }
 
   getType() {
+    // console.log(`${this.#type}`)
       return this.#type;
   }
 
@@ -23,11 +24,22 @@ class Animal {
 }
 
 class Dog extends Animal {
-  // YOUR CODE HERE
+  constructor(){
+    super("dog")
+  }
+
+speak() {
+  return `The ${this.getType()} barks`;
+}
 }
 
 class Cat extends Animal {
-  // YOUR CODE HERE
+  constructor(){
+    super("cat")
+  }
+speak() {
+  return `The ${this.getType()} meows`;
+}
 }
 
 
@@ -37,3 +49,7 @@ const cat = new Cat();
 
 console.log(dog.speak());  // Expected Output: "The dog barks"
 console.log(cat.speak());  // Expected Output: "The cat meows"
+
+
+// const aminal = new Animal(cow)
+// console.log(animal.speak())
